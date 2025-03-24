@@ -1,0 +1,6 @@
+1)header- https://www.lakemaryprep.com/ .
+2)footer- https://www.lakemaryprep.com/ .
+3)about-  https://www.lakemaryprep.com/ .
+4)pricing- https://apphospital.devserver.work/.
+5)testimonial- https://apphospital.devserver.work/.
+6)

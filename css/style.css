@@ -1,0 +1,419 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+h1,
+h2 {
+  color: #0f2a33;
+  font-family: "brandon-grotesque", sans-serif;
+}
+p a {
+  color: white;
+  font-family: "brandon-grotesque", sans-serif;
+}
+:root {
+  /* Custom Theme Configuration */
+  --custom-font: "";
+  --primary-color: #1da196d6;
+  --secondary-color: #000000;
+  --hover-color: #00ced1;
+  --background-color:#28282b;
+}
+
+.hero-gradient {
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0) 0%,
+    rgba(7, 117, 145, 0.03) 100%
+  );
+  background-repeat: no-repeat;
+}
+.sticky-banner {
+  background-color: rgba(0, 0, 0, 0.65);
+  position: sticky;
+  position: -webkit-sticky;
+  bottom: 0;
+}
+
+.custom-style-product {
+  font-size: 0.8em;
+  letter-spacing: 0.2em;
+}
+
+.hero {
+  text-align: center;
+  text-align: justify;
+}
+.nav-link {
+  font-weight: bold;
+  color: white;
+}
+
+.navbar-brand img {
+  height: 50px;
+}
+.navbar-nav {
+  gap: 20px;
+}
+.search-bar {
+  display: none;
+}
+.search-bar.active {
+  display: inline-block;
+}
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.btn-custom,
+.btn {
+  background-color: #1da196d6;
+  color: white;
+  transition: 0.3s;
+}
+.btn-custom,
+.btn:hover {
+  opacity: 0.9;
+  background-color: #00ced1;
+  color: white;
+}
+.menu-link {
+  position: relative;
+  text-decoration: none;
+  color: #ebeff0; /* Normal text color */
+  transition: color 0.3s, transform 0.3s;
+}
+
+.menu-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: rgb(96, 126, 228); /* Underline color */
+  transition: width 0.3s;
+}
+
+.menu-link:hover {
+  color: #00ced1; /* Text turns white on hover */
+}
+
+.menu-link:hover::after {
+  width: 100%; /* Underline expands fully */
+}
+
+/* Search Bar Style */
+.search-bar {
+  display: none;
+  transition: 0.3s;
+  width: 200px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.icon-btn:hover {
+  color: #00ced1;
+}
+
+/* Offcanvas Styling */
+.offcanvas {
+  width: 300px;
+  background-color: var(--primary-color) !important;
+}
+.header {
+  background: url("/assets/images/doc-globe.png") no-repeat center center/cover;
+  height: 100vh; /* Full viewport height */
+  position: relative;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Transparent Navbar */
+.navbar {
+  background: rgba(255, 255, 255, 0.3) !important; /* Semi-transparent */
+  transition: background 0.3s;
+}
+/* Offcanvas Background & Layout */
+.offcanvas {
+  background-color: var(--primary-color); /* Button background color */
+  color: white;
+}
+
+/* Offcanvas Header */
+.offcanvas-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Search Bar in Offcanvas */
+.offcanvas-search input {
+  flex: 1;
+  border: 1px solid white;
+  background-color: #199e92d6 !important;
+  color: black;
+}
+
+.offcanvas-search button {
+  background-color: #199e92d6; /* Match button color */
+  color: white;
+  border: none;
+}
+
+.offcanvas-search button:hover {
+  opacity: 0.9;
+}
+
+/* Offcanvas Buttons */
+.offcanvas-buttons a {
+  background-color: #1da196d6; /* Match button color */
+  border: none;
+  color: white;
+  text-align: left; /* Align text to left */
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+
+.offcanvas-buttons a:hover {
+  background-color: #1da196d6; /* Darker shade on hover */
+  opacity: 0.9;
+}
+
+/* Offcanvas Links Styling */
+.offcanvas-body ul li a {
+  display: block;
+  padding: 10px 0;
+  color: white;
+  text-align: left; /* Align links to left */
+  transition: 0.3s;
+}
+
+.offcanvas-body ul li a:hover {
+  color: #00ced1; /* Highlight color on hover */
+  text-decoration: underline;
+}
+.nav-pills .nav-link {
+  color: #333;
+  font-size: 18px;
+  font-weight: bold;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link:hover {
+  color: #fff;
+  background: linear-gradient(
+    135deg,
+    #1e3c72,
+    #2a5298
+  ); /* Globe shadow gradient */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.nav-pills .nav-link.active {
+  color: white;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  border-bottom: 3px solid white; /* White underline */
+}
+
+/* Tab Content */
+.tab-content {
+  position: relative;
+  z-index: 10;
+  padding: 30px;
+  background-color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  margin-top: -20px; /* Raise content above the tab */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.content-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  background-color: #800020; /* Maroon background */
+  color: white;
+  border-radius: 10px;
+}
+
+.content-section img {
+  max-width: 40%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.content-links a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.content-links a:hover {
+  color: #ffd700; /* Gold color on hover */
+}
+
+/* Hover Effect - Show tab content */
+.tab-pane {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.nav-link:hover + .tab-content .tab-pane {
+  opacity: 1;
+  visibility: visible;
+}
+/* Section Styling */
+.about-section {
+  background: #28282b;
+  padding: 40px 0;
+}
+
+.about-title {
+  font-size: 38px;
+  font-weight: bold;
+  color: white; /* Medical blue color */
+}
+
+.about-text {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #ece9e9;
+}
+
+.fa-arrow-right {
+  background-color: rgba(118, 13, 23, 0.97);
+  color: white;
+}
+
+/* Button Styling */
+.btn-primary {
+  background: var(--primary-color);
+  border: none;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background: var(--hover-color);
+  transform: scale(1.05);
+}
+
+/* Image Styling with Hover Effect */
+.about-img {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease;
+  border-radius: 12px;
+
+
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Text Hover Animation */
+/* .about-text:hover {
+        color: var(--primary-color);
+        transition: color 0.5s;
+      } */
+
+#About {
+  font-family: "Noto Serif", serif;
+}
+.more{
+  font-weight: 800;
+}
+.learn-more {
+  background: transparent;
+  color: rgb(238, 232, 232);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.learn-more:hover {
+  background: white;
+  color: red;
+}
+
+.learn-more:hover p
+ {
+  color: rgba(118, 13, 23, 0.97);
+}
+  @keyframes slideLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideRight {
+    from {
+      opacity: 0;
+      transform: translateX(100px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .about-section .col-md-7 {
+    animation: slideLeft 1s ease-in-out;
+  }
+  
+  .about-section .col-md-5 {
+    animation: slideRight 1s ease-in-out;
+  }
+/* pricing-section */
+.pricing-section{
+  background-color: #28282b;
+}
+
+/* testimonial */
+.testimonial-section{
+  background-color: #28282b;
+}
+.small-img{
+  width: 50px;
+  height: 50px;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.footer{
+  background-color:#00ced1;
+}
+li{
+  color: white;
+}
+ul li:hover {
+  text-decoration: underline;
+}
+.fa-brands{
+  font-size: 24px;
+}
