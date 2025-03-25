@@ -334,18 +334,6 @@ h1 {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 :root {
   /* Custom Theme Configuration */
   --custom-font: "";
@@ -354,7 +342,6 @@ h1 {
   --hover-color: #00ced1;
   --background-color:#28282b;
 }
-
 .hero-gradient {
   background-image: linear-gradient(
     rgba(255, 255, 255, 0) 0%,
@@ -727,6 +714,14 @@ h1 {
 .testimonial-section{
   background-color: #28282b;
 }
+
+.p-4.bg-white.border {
+  min-height: 300px; /* Adjust as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .small-img{
   width: 50px;
   height: 50px;
