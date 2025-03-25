@@ -79,7 +79,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-// pricing section image 
+// pricing section 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const counters = document.querySelectorAll(".counter");
+
+  counters.forEach((counter) => {
+      const target = +counter.getAttribute("data-target"); // Get target number
+      let count = 0;
+      let isCounting = true;
+
+      // Function to increment and decrement quickly
+      const fastScroll = setInterval(() => {
+          count = Math.floor(Math.random() * target); // Generate random value in range
+          counter.innerText = count.toLocaleString() + "+"; // Format number
+      }, 100); // Update every 100ms
+
+      // Stop after 2 seconds and set final value
+      setTimeout(() => {
+          clearInterval(fastScroll); // Stop fast counting
+          counter.innerText = target.toLocaleString() + "+"; // Set final value
+      }, 2000); // Stop after 2 seconds
+  });
+});
+
       
       
       
