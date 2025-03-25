@@ -1,14 +1,30 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+ 
+ 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+</head>
+
 <body>
 
   
+    
+
+ 
+  <!-- Navbar -->
   <nav class="navbar container mx-auto">
     <div class="logo">
-      <img
-        src="./assets/images/logo (1).png"
-        style="height: 50px; width: 250px"
-      />
+      <img src="./assets/images/logo (1).png" style="height: 50px; width: 250px" />
     </div>
 
+    <!-- Desktop Navigation -->
     <div class="nav-links">
       <a href="#" class="active">Home</a>
       <a href="#">About</a>
@@ -18,13 +34,16 @@
       <button class="contact-btn">Login</button>
     </div>
 
-    <button class="mobile-menu-btn">
+    <!-- Mobile Menu Button -->
+    <button id="mobileMenuBtn" class="mobile-menu-btn">
       <span></span>
       <span></span>
       <span></span>
     </button>
+    
   </nav>
 
+  <!-- Mobile Menu -->
   <div class="mobile-menu">
     <a href="#" class="active">Home</a>
     <a href="#">About</a>
@@ -34,7 +53,7 @@
     <button class="contact-btn">Login</button>
   </div>
 
-  <main class="hero">
+  <main class="container hero">
     <div class="hero-content">
       <h1 class="banner_text">
         <span class="text">
@@ -65,5 +84,6 @@
       </div>
     </div>
   </main>
-  
+  <script src="./script/script.js"></script>
 </body>
+</html>
