@@ -36,18 +36,7 @@
 }
 
 
-.mobile-menu {
-  display: none; /* Hidden by default */
-  flex-direction: column;
-  position: absolute;
-  top: 60px;
-  right: 0;
-  background: white;
-  width: 100%;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  z-index: 999; /* Ensure it appears above other content */
-}
+   
 
 .mobile-menu.active {
   display: flex !important; /* Force visibility */
@@ -68,3 +57,58 @@
   }
 }
 
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+}
+
+
+
+/* about us media  */
+
+@media (max-width: 768px) {
+  .about-section {
+    text-align: left; /* Heading and text start from the left */
+  }
+
+  /* About Us Heading */
+  .about-section h1 {
+    text-align: left;
+    
+  }
+
+  /* Paragraph alignment */
+  .about-text {
+    font-size: 16px;
+    text-align: center;
+    font-weight:600;
+
+  }
+
+  /* Align all text to the left */
+  .about-title,
+  .about-text {
+    text-align: left;
+    font-weight:500;
+  }
+
+  /* Center the button */
+  .learn-more {
+    margin: 20px auto; /* Center horizontally */
+    display: flex;
+    justify-content: center;
+  }
+
+  /* Image: Move below text and center it */
+  .about-img {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 300px; /* Adjust as needed */
+  }
+}

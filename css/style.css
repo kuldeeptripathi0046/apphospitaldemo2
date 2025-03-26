@@ -52,46 +52,75 @@ p a {
 }
 
 /* Mobile Menu Button */
+/* Style the hamburger button */
 .mobile-menu-btn {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 5px;
-  background: transparent;
+  background: none;
   border: none;
   cursor: pointer;
 }
-
 .mobile-menu-btn span {
-  width: 30px;
-  height: 3px;
+  display: block;
+  width: 50px;
+  height: 4px;
   background: black;
   transition: 0.3s;
 }
-
 /* Mobile Menu */
-.mobile-menu {
-  position: relative;
-  top: 60px;
-  right: 20px;
-  background: white;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+/* .mobile-menu {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 40vh;
+  background: white;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   flex-direction: column;
-  z-index: 9999;
-}
+  gap: 10px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+} */
 
-.mobile-menu a {
-  text-decoration: none;
-  color: black;
-  font-weight: 300;
-  margin-bottom: 10px;
+/* Default Mobile Menu - Initially Hidden */
+.mobile-menu {
+  position: fixed;
+  top: 80px;
+  left: -100%; /* Hide from the left */
+  width: 200px;
+  height: auto;
+  background: white;
+  box-shadow: 2px 0 5px rgba(39, 35, 35, 0.1);
+  padding: 20px;
+  flex-direction: column;
+  gap: 10px;
+  transition: left 0.3s ease-in-out;
+  display: flex; /* Ensures it's visible when toggled */
+  z-index: 999;
+  text-decoration:none;
+  font-family: 'Noto Serif';
+  font-size:16px;
+}
+.mobile-menu a,
+.mobile-menu-btn {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
 }
 
 /* Show menu when active */
 .mobile-menu.active {
   display: flex;
+  transform: translateX(0);
+  left: 0;
+
 }
 
 /* Mobile Styles */
@@ -865,4 +894,27 @@ footer {
 .footer-divider {
   border-top: 1px solid #dee2e6;
   margin: 30px 0;
+}
+
+
+/ fade-in style /
+.animat{
+  width: 48%;
+  opacity: 0; / Initially hidden /
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/ Scroll Animations /
+.fade-left {
+  transform: translateX(-100px); / Move from left /
+}
+
+.fade-right {
+  transform: translateX(100px); / Move from right /
+}
+
+/ Fade-in Effect when Scrolled /
+.fade-in {
+  opacity: 1;
+  transform: translateX(0);
 }
