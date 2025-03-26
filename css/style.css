@@ -897,23 +897,21 @@ footer {
 }
 
 
-/ fade-in style /
+ fade-in style 
 .animat{
   width: 48%;
-  opacity: 0; / Initially hidden /
+  opacity: 0; 
   transition: opacity 1s ease, transform 1s ease;
 }
 
-/ Scroll Animations /
+ Scroll Animations 
 .fade-left {
-  transform: translateX(-100px); / Move from left /
+  transform: translateX(-100px); 
 }
 
 .fade-right {
-  transform: translateX(100px); / Move from right /
+  transform: translateX(100px); 
 }
-
-/ Fade-in Effect when Scrolled /
 .fade-in {
   opacity: 1;
   transform: translateX(0);

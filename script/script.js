@@ -41,6 +41,33 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     }, 500); // Delay to ensure elements exist
   
+
+    setTimeout(function () {
+      const fadeInElements = document.querySelectorAll(".fade-left, .fade-right");
+  
+      const scrollHandler = () => {
+        fadeInElements.forEach(element => {
+          const rect = element.getBoundingClientRect();
+          if (rect.top < window.innerHeight * 0.9) {
+            element.classList.add("fade-in");
+          }
+        });
+      };
+  
+      window.addEventListener("scroll", scrollHandler);
+      window.addEventListener("load", scrollHandler);
+    }, 2000);
+  });
+
+
+
+
+
+
+
+
+
+
     // Pricing Section Counter Animation
     setTimeout(function () {
       const pricingSection = document.querySelector(".pricing_section");
@@ -105,20 +132,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, 3000);
   
     // Features & Testimonial Section Fade-in Effect
-    setTimeout(function () {
-      const fadeInElements = document.querySelectorAll(".fade-left, .fade-right");
-  
-      const scrollHandler = () => {
-        fadeInElements.forEach(element => {
-          const rect = element.getBoundingClientRect();
-          if (rect.top < window.innerHeight * 0.9) {
-            element.classList.add("fade-in");
-          }
-        });
-      };
-  
-      window.addEventListener("scroll", scrollHandler);
-      window.addEventListener("load", scrollHandler);
-    }, 2000);
-  });
+
+
+
   
